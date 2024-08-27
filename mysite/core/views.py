@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 
+from mysite.core.models import Post
+
 
 # Create your views here.
 def home(request):
@@ -32,3 +34,6 @@ def secret_page(request):
 class SecretPage(LoginRequiredMixin, TemplateView):
     template_name = 'secret_page.html'
 
+def post_list(request):
+    posts = Post.objects.all()  # Получите все посты из базы данных
+    return render(request, 'base.html', {'posts': posts})

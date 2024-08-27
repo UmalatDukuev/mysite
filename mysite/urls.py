@@ -26,5 +26,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('secret/', views.secret_page, name="secret"),
     path('secret2/', views.SecretPage.as_view(), name="secret2"),
+    path('posts/', views.post_list, name='post_list'),
 
 ]
