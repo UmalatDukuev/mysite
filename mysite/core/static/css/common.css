@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-.base__container, .content_container {
+.base__container, .content_container, .posts_container {
   max-width: 900px;
   margin: 5px auto; /* This centers the container horizontally */
   padding: 20px;
@@ -16,6 +16,12 @@ body {
 }
 
 h1 {
+  color: #007BFF;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h3 {
   color: #007BFF;
   font-size: 2.5rem;
   margin-bottom: 20px;
