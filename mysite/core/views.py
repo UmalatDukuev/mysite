@@ -37,3 +37,11 @@ class SecretPage(LoginRequiredMixin, TemplateView):
 def post_list(request):
     posts = Post.objects.all()  # Получите все посты из базы данных
     return render(request, 'posts.html', {'posts': posts})
+
+
+def profile(request):
+    return HttpResponse("My Profile")
+
+
+
+
