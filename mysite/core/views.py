@@ -35,9 +35,11 @@ class SecretPage(LoginRequiredMixin, TemplateView):
     template_name = 'secret_page.html'
 
 def post_list(request):
-    posts = Post.objects.all()  # Получите все посты из базы данных
+    posts = Post.objects.all()
     return render(request, 'posts.html', {'posts': posts})
 
+def friends(request):
+    return render(request, 'friends.html')
 
 def profile(request):
     return HttpResponse("My Profile")
